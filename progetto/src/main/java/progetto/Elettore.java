@@ -15,7 +15,6 @@ public class Elettore {
 	}
 	
 	public String getNome() {
-		System.out.println("ciao");
 		return nome;
 	}
 	
