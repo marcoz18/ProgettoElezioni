@@ -15,6 +15,7 @@ public class Elettore {
 	}
 	
 	public String getNome() {
+		System.out.println("i topi non avevano nipoti");
 		return nome;
 	}
 	
