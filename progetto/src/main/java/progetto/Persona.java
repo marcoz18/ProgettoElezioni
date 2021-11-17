@@ -2,8 +2,8 @@ package progetto;
 
 public abstract class Persona {
 	
-	private String nome;
-	private String cognome;
+	private /*@ non_null @*/ String nome;
+	private /*@ non_null @*/ String cognome;
 	private int giornoNascita;
 	private int meseNascita;
 	private int annoNascita;

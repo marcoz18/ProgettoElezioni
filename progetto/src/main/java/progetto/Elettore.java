@@ -5,6 +5,9 @@ public class Elettore extends Persona{
 	private char[] codFiscale;
 	private boolean voto;
 	
+	//@ requires: (annoNascita - "anno attuale") >= 18
+	//@ requires: nazioneNascita == "Italia" ==> \exists comuneNascita
+	/*@ private invariant (sesso == "M") || (sesso == "F") @*/
 	public Elettore(String nome, String cognome, int giornoNascita, int meseNascita, int annoNascita, String comuneNascita, String nazioneNascita, String sesso, String codFiscale, boolean voto) {
 		this.setNome(nome);
 		this.setCognome(cognome);
@@ -153,7 +156,7 @@ public class Elettore extends Persona{
 	public boolean checkGiorno(char[] cod) {
 		int gg = this.getGiornoNascita();
 		String sesso = this.getSesso();
-		if(sesso == "Uomo") {
+		if(sesso == "M") {
 			if(gg < 10) {
 				if((cod[9] == '0') && (cod[10] == (char)gg)) {
 					return true;
